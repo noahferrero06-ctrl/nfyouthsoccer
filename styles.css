@@ -633,61 +633,43 @@ a:hover {
 
 .players-experiences-layout {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.players-experiences-top-row,
+.players-experiences-bottom-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-areas:
-    "talk training-1"
-    "talk training-2"
-    "empty luca";
-  gap: 1.15rem;
+  gap: 1rem;
   align-items: start;
 }
 
-.players-video,
-.players-experiences-empty {
-  min-width: 0;
+.players-experiences-training-grid {
+  display: grid;
+  gap: 1rem;
 }
 
 .players-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 0;
   width: 100%;
-  aspect-ratio: 9 / 16;
-  max-height: 520px;
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 14px;
   background-color: #0a2718;
-}
-
-.players-video-talk {
-  grid-area: talk;
-}
-
-.players-video-training-1 {
-  grid-area: training-1;
-}
-
-.players-video-training-2 {
-  grid-area: training-2;
-}
-
-.players-video-luca {
-  grid-area: luca;
+  overflow: hidden;
 }
 
 .players-experiences-empty {
-  grid-area: empty;
+  min-height: 1px;
 }
 
 .players-video-element {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
-  object-position: center;
   border: 0;
-  background-color: transparent;
+  background-color: #0a2718;
 }
 
 .testimonials-section .section-header {
@@ -874,13 +856,10 @@ a:hover {
 /* Responsive Design */
 /* ==================== */
 @media (max-width: 768px) {
-  .players-experiences-layout {
+  .players-experiences-top-row,
+  .players-experiences-training-grid,
+  .players-experiences-bottom-row {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "talk"
-      "training-1"
-      "training-2"
-      "luca";
   }
 
   .players-experiences-empty {
