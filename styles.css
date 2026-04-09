@@ -634,6 +634,7 @@ a:hover {
 .players-experiences-layout {
   width: 100%;
   margin-top: -80px;
+  --players-lower-row-gap: 1.95rem;
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   grid-template-areas:
@@ -676,7 +677,7 @@ a:hover {
 
 .players-video-luca {
   grid-area: luca;
-  margin-top: 1.95rem;
+  margin-top: var(--players-lower-row-gap);
 }
 
 .players-video {
@@ -690,11 +691,11 @@ a:hover {
   grid-area: placeholder;
   min-width: 0;
   width: 100%;
-  margin-top: 1.95rem;
+  margin-top: var(--players-lower-row-gap);
   aspect-ratio: 9 / 16;
   border-radius: 14px;
-  border: 1.5px dashed rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(4, 28, 14, 0.32);
   display: grid;
   place-items: center;
   padding: 1.2rem;
