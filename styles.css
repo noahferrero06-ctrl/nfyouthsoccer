@@ -633,89 +633,44 @@ a:hover {
 }
 
 .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 1.75rem;
   width: 100%;
-  margin: 0;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.testimonial-card {
-  width: min(100%, 1180px);
-  max-width: 1180px;
+.testimonial-stack {
+  width: min(100%, 560px);
   display: grid;
-  justify-items: center;
-  gap: 1rem;
-  padding: 2.25rem;
-  margin: 0;
+  gap: 0.85rem;
+  padding: 2rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.09) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-  text-align: center;
 }
 
-.testimonial-video-row {
+.testimonial-embed {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.testimonial-media-item {
-  width: 100%;
-  display: grid;
-  gap: 0.5rem;
+  gap: 0.45rem;
+  justify-items: center;
 }
 
 .testimonial-video-wrap {
   width: 100%;
-  max-width: 100%;
+  max-width: 500px;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
   background-color: #000;
 }
 
-.testimonial-video-wrap-secondary {
-  width: 100%;
-  max-width: 100%;
-}
-
-.testimonial-video-placeholder {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 14px;
-  border: 2px dashed rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.08);
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 600;
-  text-align: center;
-}
-
-.testimonial-video-placeholder span {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.testimonial-video {
+.testimonial-video-frame {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  border: 0;
   background-color: #000;
-}
-
-.testimonial-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.3);
-  margin-top: 0.25rem;
 }
 
 .testimonial-video-label {
@@ -724,11 +679,7 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.btn-testimonial {
-  margin-top: 0.8rem;
-  min-width: 200px;
+  text-align: center;
 }
 
 .testimonials-section .section-header {
@@ -919,14 +870,9 @@ a:hover {
     padding: 0 1rem;
   }
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .testimonial-video-row {
-    grid-template-columns: 1fr;
-    gap: 0.9rem;
+  .testimonial-stack {
+    padding: 1.35rem;
+    border-radius: 18px;
   }
 
   .header-content {
@@ -1074,16 +1020,7 @@ a:hover {
     padding: 1.5rem;
   }
 
-  .testimonial-card {
-    padding: 1.75rem;
-    border-radius: 16px;
-  }
-
   .testimonial-video-wrap {
-    max-width: 100%;
-  }
-
-  .testimonial-video-wrap-secondary {
     max-width: 100%;
   }
 
