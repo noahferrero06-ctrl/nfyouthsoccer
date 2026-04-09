@@ -661,12 +661,12 @@ a:hover {
 
 .players-video-training-1 {
   grid-area: training-1;
-  transform: translateY(-0.4rem);
+  transform: translateY(-0.65rem);
 }
 
 .players-video-training-2 {
   grid-area: training-2;
-  transform: translateY(0.4rem);
+  transform: translateY(0.65rem);
 }
 
 .players-video-luca {
