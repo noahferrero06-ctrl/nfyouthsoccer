@@ -623,7 +623,7 @@ a:hover {
 /* Testimonials Section */
 /* ==================== */
 .testimonials-section {
-  padding: 4.5rem 0;
+  padding: 3.8rem 0 4.5rem;
   background: linear-gradient(135deg, var(--dark-green) 0%, #0f5224 100%);
 }
 
@@ -641,7 +641,8 @@ a:hover {
     "talk training-2"
     "placeholder luca";
   align-items: start;
-  gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 0.45rem;
 }
 
 .players-experiences-title {
