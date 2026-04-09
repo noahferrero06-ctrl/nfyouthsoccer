@@ -633,26 +633,41 @@ a:hover {
 
 .players-experiences-layout {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.players-experiences-top-row {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-areas:
+    "title ."
+    "talk training-1"
+    "talk training-2"
+    "placeholder luca";
   align-items: start;
   gap: 1rem;
 }
 
-.players-experiences-right-stack {
-  display: grid;
-  gap: 1rem;
+.players-experiences-title {
+  grid-area: title;
+  text-align: center;
 }
 
-.players-experiences-bottom-row {
-  display: flex;
-  justify-content: center;
+.players-experiences-title h2 {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.players-video-talk {
+  grid-area: talk;
+}
+
+.players-video-training-1 {
+  grid-area: training-1;
+}
+
+.players-video-training-2 {
+  grid-area: training-2;
+}
+
+.players-video-luca {
+  grid-area: luca;
 }
 
 .players-video {
@@ -662,8 +677,25 @@ a:hover {
   overflow: hidden;
 }
 
-.players-video-luca {
-  width: min(100%, 520px);
+.players-placeholder {
+  grid-area: placeholder;
+  min-width: 0;
+  width: 100%;
+  border-radius: 14px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  min-height: 160px;
+}
+
+.players-placeholder p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
 }
 
 .players-video-element {
@@ -672,14 +704,6 @@ a:hover {
   height: auto;
   object-fit: contain;
   border: 0;
-}
-
-.testimonials-section .section-header {
-  margin-bottom: 2.25rem;
-}
-
-.testimonials-section .section-header h2 {
-  color: var(--white);
 }
 
 /* ==================== */
@@ -858,17 +882,15 @@ a:hover {
 /* Responsive Design */
 /* ==================== */
 @media (max-width: 768px) {
-  .players-experiences-top-row,
-  .players-experiences-right-stack {
+  .players-experiences-layout {
     grid-template-columns: 1fr;
-  }
-
-  .players-experiences-bottom-row {
-    justify-content: stretch;
-  }
-
-  .players-video-luca {
-    width: 100%;
+    grid-template-areas:
+      "title"
+      "talk"
+      "training-1"
+      "training-2"
+      "luca"
+      "placeholder";
   }
 
   .header-content {
