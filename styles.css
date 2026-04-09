@@ -636,9 +636,9 @@ a:hover {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   grid-template-areas:
-    "title training-1"
+    "title ."
+    "talk training-1"
     "talk training-2"
-    "talk ."
     "placeholder luca";
   align-items: start;
   gap: 1rem;
@@ -656,14 +656,17 @@ a:hover {
 
 .players-video-talk {
   grid-area: talk;
+  align-self: center;
 }
 
 .players-video-training-1 {
   grid-area: training-1;
+  transform: translateY(-0.4rem);
 }
 
 .players-video-training-2 {
   grid-area: training-2;
+  transform: translateY(0.4rem);
 }
 
 .players-video-luca {
@@ -891,6 +894,15 @@ a:hover {
       "training-2"
       "luca"
       "placeholder";
+  }
+
+  .players-video-talk {
+    align-self: auto;
+  }
+
+  .players-video-training-1,
+  .players-video-training-2 {
+    transform: none;
   }
 
   .header-content {
