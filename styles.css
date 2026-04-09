@@ -638,78 +638,31 @@ a:hover {
   justify-content: center;
 }
 
-.testimonial-stack {
+.testimonial-video-grid {
   width: min(100%, 1080px);
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
+  align-items: start;
 }
 
-.testimonial-embed {
-  width: 100%;
-  display: grid;
-  justify-items: stretch;
+.testimonial-video-card,
+.testimonial-video-gap {
+  min-width: 0;
 }
 
-.testimonial-embed-right {
-  grid-column: 2;
+.testimonial-video-gap {
+  grid-column: 1 / 3;
 }
 
-.testimonial-video-wrap {
-  width: 100%;
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: #0c0c0c;
-}
-
-.testimonial-video-link {
-  position: relative;
+.testimonial-video {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  text-decoration: none;
-}
-
-.testimonial-video-link::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.28) 100%);
-}
-
-.testimonial-video-thumbnail {
-  display: block;
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 9 / 16;
   object-fit: cover;
-}
-
-.testimonial-play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.62);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.testimonial-play-button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 54%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid var(--white);
+  border: 0;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .testimonials-section .section-header {
@@ -900,14 +853,12 @@ a:hover {
     padding: 0 1rem;
   }
 
-  .testimonial-stack {
+  .testimonial-video-grid {
     grid-template-columns: 1fr;
-    padding: 0.9rem;
-    border-radius: 18px;
   }
 
-  .testimonial-embed-right {
-    grid-column: auto;
+  .testimonial-video-gap {
+    display: none;
   }
 
   .header-content {
@@ -1055,7 +1006,7 @@ a:hover {
     padding: 1.5rem;
   }
 
-  .testimonial-video-wrap {
+  .testimonial-video {
     max-width: 100%;
   }
 
