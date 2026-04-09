@@ -633,20 +633,13 @@ a:hover {
 
 .players-experiences-layout {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.players-experiences-top-row,
-.players-experiences-bottom-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
 }
 
-.players-experiences-training-grid {
+.players-experiences-right-stack {
   display: grid;
   gap: 1rem;
 }
@@ -656,10 +649,6 @@ a:hover {
   width: 100%;
   border-radius: 14px;
   overflow: hidden;
-}
-
-.players-experiences-empty {
-  min-height: 1px;
 }
 
 .players-video-element {
@@ -854,14 +843,9 @@ a:hover {
 /* Responsive Design */
 /* ==================== */
 @media (max-width: 768px) {
-  .players-experiences-top-row,
-  .players-experiences-training-grid,
-  .players-experiences-bottom-row {
+  .players-experiences-layout,
+  .players-experiences-right-stack {
     grid-template-columns: 1fr;
-  }
-
-  .players-experiences-empty {
-    display: none;
   }
 
   .header-content {
