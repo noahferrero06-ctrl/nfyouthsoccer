@@ -800,6 +800,17 @@ a:hover {
   min-width: 220px;
 }
 
+.form-success {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--yellow);
+  display: none;
+}
+
+.form-success.is-visible {
+  display: block;
+}
+
 .contact-info {
   display: grid;
   grid-template-columns: 1fr;

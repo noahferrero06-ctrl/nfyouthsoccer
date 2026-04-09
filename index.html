@@ -197,46 +197,32 @@
             <p>Get in touch with us to start your training journey.</p>
           </div>
           <div class="contact-main">
-            <form class="booking-form" aria-label="Book your training session">
+            <form
+              class="booking-form"
+              aria-label="Book your training session"
+              action="https://formspree.io/f/mvzvjojn"
+              method="POST"
+            >
               <div class="booking-form-grid">
                 <div class="form-group">
-                  <label for="first-name">First Name</label>
-                  <input type="text" id="first-name" name="firstName" required>
-                </div>
-                <div class="form-group">
-                  <label for="last-name">Last Name</label>
-                  <input type="text" id="last-name" name="lastName" required>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="phone">Phone Number</label>
+                  <label for="phone">Phone</label>
                   <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                  <label for="player-age">Player Age</label>
-                  <input type="number" id="player-age" name="playerAge" min="4" max="18" required>
-                </div>
-                <div class="form-group">
-                  <label for="training-type">Training Type</label>
-                  <select id="training-type" name="trainingType" required>
-                    <option value="" selected disabled>Select training type</option>
-                    <option value="1-on-1">1-on-1 Training</option>
-                    <option value="group">Group Training</option>
-                  </select>
-                </div>
-                <div class="form-group form-group-full">
-                  <label for="location">Preferred Location</label>
-                  <input type="text" id="location" name="location" required>
                 </div>
                 <div class="form-group form-group-full">
                   <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="5" placeholder="Tell us your goals, availability, and any details you'd like us to know."></textarea>
+                  <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary form-submit btn-cta">Book My Session</button>
+              <p class="form-success" role="status" aria-live="polite">Thanks! I'll reach out soon.</p>
             </form>
             <div class="contact-info">
               <div class="contact-item">
@@ -277,5 +263,38 @@
         <p>&copy; 2024 NF Youth Soccer. Building champions, one player at a time.</p>
       </div>
     </footer>
+
+    <script>
+      const bookingForm = document.querySelector('.booking-form');
+      const successMessage = bookingForm?.querySelector('.form-success');
+
+      if (bookingForm && successMessage) {
+        bookingForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(bookingForm);
+
+          try {
+            const response = await fetch(bookingForm.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                Accept: 'application/json',
+              },
+            });
+
+            if (!response.ok) {
+              throw new Error('Form submission failed');
+            }
+
+            bookingForm.reset();
+            successMessage.classList.add('is-visible');
+          } catch (error) {
+            successMessage.textContent = 'Something went wrong. Please try again.';
+            successMessage.classList.add('is-visible');
+          }
+        });
+      }
+    </script>
   </body>
 </html>
