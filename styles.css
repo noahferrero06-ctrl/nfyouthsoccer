@@ -636,9 +636,9 @@ a:hover {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   grid-template-areas:
-    "title ."
-    "talk training-1"
+    "title training-1"
     "talk training-2"
+    "talk ."
     "placeholder luca";
   align-items: start;
   gap: 1rem;
