@@ -649,6 +649,9 @@ a:hover {
 .players-experiences-title {
   grid-area: title;
   text-align: center;
+  position: relative;
+  top: 80px;
+  z-index: 1;
 }
 
 .players-experiences-title h2 {
@@ -673,6 +676,7 @@ a:hover {
 
 .players-video-luca {
   grid-area: luca;
+  margin-top: 0.75rem;
 }
 
 .players-video {
@@ -686,13 +690,13 @@ a:hover {
   grid-area: placeholder;
   min-width: 0;
   width: 100%;
+  aspect-ratio: 9 / 16;
   border-radius: 14px;
   border: 1.5px dashed rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.08);
   display: grid;
   place-items: center;
   padding: 1.2rem;
-  min-height: 160px;
 }
 
 .players-placeholder p {
@@ -896,6 +900,16 @@ a:hover {
       "training-2"
       "luca"
       "placeholder";
+    margin-top: 0;
+  }
+
+  .players-experiences-title {
+    position: static;
+    top: auto;
+  }
+
+  .players-video-luca {
+    margin-top: 0;
   }
 
   .players-video-talk {
