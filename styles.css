@@ -676,7 +676,7 @@ a:hover {
 
 .players-video-luca {
   grid-area: luca;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .players-video {
@@ -690,6 +690,7 @@ a:hover {
   grid-area: placeholder;
   min-width: 0;
   width: 100%;
+  margin-top: 1rem;
   aspect-ratio: 9 / 16;
   border-radius: 14px;
   border: 1.5px dashed rgba(255, 255, 255, 0.45);
@@ -909,6 +910,10 @@ a:hover {
   }
 
   .players-video-luca {
+    margin-top: 0;
+  }
+
+  .players-placeholder {
     margin-top: 0;
   }
 
