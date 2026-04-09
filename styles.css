@@ -655,6 +655,10 @@ a:hover {
   justify-items: stretch;
 }
 
+.testimonial-embed-right {
+  grid-column: 2;
+}
+
 .testimonial-video-wrap {
   width: 100%;
   border-radius: 14px;
@@ -863,6 +867,10 @@ a:hover {
     grid-template-columns: 1fr;
     padding: 1.35rem;
     border-radius: 18px;
+  }
+
+  .testimonial-embed-right {
+    grid-column: auto;
   }
 
   .header-content {
