@@ -628,49 +628,63 @@ a:hover {
 }
 
 .testimonials-section .container {
-  max-width: none;
-  padding: 0 2rem;
+  max-width: 1140px;
 }
 
-.testimonials-grid {
+.players-experiences-layout {
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.testimonial-video-grid {
-  width: min(100%, 1080px);
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "talk training-1"
+    "talk training-2"
+    "empty luca";
+  gap: 1.15rem;
   align-items: start;
 }
 
-.testimonial-video-card,
-.testimonial-video-gap {
+.players-video,
+.players-experiences-empty {
   min-width: 0;
 }
 
-.testimonial-video-card {
+.players-video {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   aspect-ratio: 9 / 16;
-  border-radius: 18px;
+  max-height: 520px;
+  border-radius: 16px;
   overflow: hidden;
-  background-color: #08130b;
+  background-color: #0a2718;
 }
 
-.testimonial-video-gap {
-  grid-column: 1 / 3;
+.players-video-talk {
+  grid-area: talk;
 }
 
-.testimonial-video {
+.players-video-training-1 {
+  grid-area: training-1;
+}
+
+.players-video-training-2 {
+  grid-area: training-2;
+}
+
+.players-video-luca {
+  grid-area: luca;
+}
+
+.players-experiences-empty {
+  grid-area: empty;
+}
+
+.players-video-element {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border: 0;
   background-color: transparent;
@@ -860,15 +874,16 @@ a:hover {
 /* Responsive Design */
 /* ==================== */
 @media (max-width: 768px) {
-  .testimonials-section .container {
-    padding: 0 1rem;
-  }
-
-  .testimonial-video-grid {
+  .players-experiences-layout {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "talk"
+      "training-1"
+      "training-2"
+      "luca";
   }
 
-  .testimonial-video-gap {
+  .players-experiences-empty {
     display: none;
   }
 
@@ -1015,10 +1030,6 @@ a:hover {
 
   .training-program-card {
     padding: 1.5rem;
-  }
-
-  .testimonial-video {
-    max-width: 100%;
   }
 
   .contact-item {
