@@ -19,13 +19,24 @@
           <img src="Logo.jpeg" alt="NF Youth Soccer Logo" class="logo">
           <span class="brand-name">NF Youth Soccer</span>
         </div>
-        <nav class="top-nav" aria-label="Main navigation">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+        <nav id="primary-menu" class="top-nav" aria-label="Main navigation">
           <a href="#testimonials">Players Experiences</a>
           <a href="#why">Why Choose Us</a>
           <a href="#about">Meet Coach Noah</a>
           <a href="#training">Training / Services</a>
-          <a href="#book">Ready to Book</a>
-          <a href="#book" class="btn btn-header btn-cta">Book Now</a>
+          <a href="#booking-form">Ready to Book</a>
+          <a href="#booking-form" class="btn btn-header btn-cta">Book Now</a>
         </nav>
       </div>
     </header>
@@ -37,7 +48,7 @@
           <div class="hero-content">
             <h1>Elite Youth Soccer Training for Young Players</h1>
             <p class="hero-subheadline">Private and small group soccer training designed to build confidence, skill, and love for the game.</p>
-            <a href="#book" class="btn btn-primary btn-cta">Book Your First Free Session</a>
+            <a href="#booking-form" class="btn btn-primary btn-cta">Book Your First Free Session</a>
             <p class="hero-note">First session is always free — start your training with zero risk.</p>
           </div>
           <div class="hero-visual">
@@ -161,7 +172,7 @@
                   <span class="detail-value">1 player</span>
                 </div>
               </div>
-              <a href="#book" class="btn btn-program btn-cta">Book a Session</a>
+              <a href="#booking-form" class="btn btn-program btn-cta">Book a Session</a>
             </article>
 
             <article class="training-program-card training-program-featured">
@@ -183,7 +194,7 @@
                   <span class="detail-value">2+ players</span>
                 </div>
               </div>
-              <a href="#book" class="btn btn-program btn-cta">Book a Session</a>
+              <a href="#booking-form" class="btn btn-program btn-cta">Book a Session</a>
             </article>
           </div>
         </div>
@@ -198,6 +209,7 @@
           </div>
           <div class="contact-main">
             <form
+              id="booking-form"
               class="booking-form"
               aria-label="Book your training session"
               action="https://formspree.io/f/mvzvjojn"
@@ -237,7 +249,7 @@
             <div class="contact-info">
               <p class="contact-info-title">Contact Info</p>
               <div class="contact-item">
-                <div class="contact-icon">✉️</div>
+                <a href="mailto:noahferrero06@gmail.com" class="contact-icon contact-icon-link" aria-label="Send email to noahferrero06@gmail.com">✉️</a>
                 <div class="contact-text">
                   <p class="contact-label">Email</p>
                   <a href="mailto:noahferrero06@gmail.com" class="contact-link">noahferrero06@gmail.com</a>
@@ -265,6 +277,36 @@
     </footer>
 
     <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const primaryMenu = document.querySelector('#primary-menu');
+
+      if (menuToggle && primaryMenu) {
+        const closeMenu = () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          primaryMenu.classList.remove('is-open');
+        };
+
+        menuToggle.addEventListener('click', () => {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+          primaryMenu.classList.toggle('is-open', !isExpanded);
+        });
+
+        primaryMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+              closeMenu();
+            }
+          });
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 768) {
+            closeMenu();
+          }
+        });
+      }
+
       const bookingForm = document.querySelector('.booking-form');
       const successMessage = bookingForm?.querySelector('.form-success');
 
