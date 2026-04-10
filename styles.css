@@ -570,6 +570,19 @@ a:hover {
   margin-bottom: 1.8rem;
 }
 
+.training-program-card {
+  text-align: center;
+}
+
+.training-program-card .program-badge,
+.training-program-card h3,
+.training-program-card .program-subtitle,
+.training-program-card .program-description {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .program-details {
   background-color: var(--light-green);
   border-radius: 8px;
