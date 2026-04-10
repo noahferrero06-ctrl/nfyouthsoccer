@@ -390,7 +390,7 @@ a:hover {
 .about-section .section-label {
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   font-weight: 700;
-  color: var(--dark-green);
+  color: var(--black);
   text-transform: none;
   letter-spacing: -0.01em;
   margin-bottom: 0;
