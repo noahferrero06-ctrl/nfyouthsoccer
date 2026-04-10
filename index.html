@@ -291,6 +291,8 @@
           primaryMenu.classList.add('is-open');
         };
 
+        closeMenu();
+
         menuToggle.addEventListener('click', () => {
           const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
           if (isExpanded) {
