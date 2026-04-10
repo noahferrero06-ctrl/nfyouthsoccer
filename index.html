@@ -271,6 +271,8 @@
       if (bookingForm && successMessage) {
         bookingForm.addEventListener('submit', async (event) => {
           event.preventDefault();
+          successMessage.textContent = "Thanks! I'll reach out soon.";
+          successMessage.classList.remove('is-visible');
 
           const formData = new FormData(bookingForm);
 
