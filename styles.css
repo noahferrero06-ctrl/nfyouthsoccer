@@ -892,6 +892,10 @@ a:hover {
   border-radius: 0;
 }
 
+.instagram-icon img {
+  border-radius: 0;
+}
+
 .contact-text {
   flex: 1;
 }
