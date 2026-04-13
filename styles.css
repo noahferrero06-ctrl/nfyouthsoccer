@@ -687,7 +687,7 @@ a:hover {
 /* ==================== */
 .testimonials-section {
   padding: 2rem 0 4.5rem;
-  background: linear-gradient(135deg, #0d8b5f 0%, #0fae7a 100%);
+  background: linear-gradient(135deg, #2db873 0%, #1fa85c 100%);
 }
 
 .testimonials-section .container {
@@ -785,7 +785,7 @@ a:hover {
 /* ==================== */
 .contact-section {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #1aa85b 0%, #0f6e3c 100%);
+  background: linear-gradient(135deg, #2db873 0%, #1fa85c 100%);
   color: var(--white);
 }
 
