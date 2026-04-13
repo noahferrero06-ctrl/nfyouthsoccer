@@ -523,7 +523,7 @@ a:hover {
 /* ==================== */
 .training-section {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #072812 0%, #114f27 100%);
+  background: linear-gradient(135deg, var(--dark-green) 0%, #0f5224 100%);
 }
 
 .training-section .section-header h2 {
