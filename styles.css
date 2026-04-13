@@ -1139,7 +1139,7 @@ a:hover {
   }
 
   .contact-info {
-    order: 1;
+    order: 2;
     width: 100%;
   }
 
@@ -1148,7 +1148,7 @@ a:hover {
   }
 
   .booking-form {
-    order: 2;
+    order: 1;
   }
 
 
