@@ -687,7 +687,7 @@ a:hover {
 /* ==================== */
 .testimonials-section {
   padding: 2rem 0 4.5rem;
-  background: linear-gradient(135deg, #2a8f66 0%, #1f8856 100%);
+  background: linear-gradient(135deg, #33a154 0%, #2a8f47 100%);
 }
 
 .testimonials-section .container {
@@ -719,8 +719,9 @@ a:hover {
 }
 
 .players-experiences-title h2 {
-  color: var(--white);
+  color: #0d3d20;
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .players-video-talk {
@@ -785,16 +786,16 @@ a:hover {
 /* ==================== */
 .contact-section {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #2a8f66 0%, #1f8856 100%);
+  background: linear-gradient(135deg, #33a154 0%, #2a8f47 100%);
   color: var(--white);
 }
 
 .contact-section .section-header h2 {
-  color: var(--white);
+  color: #0d3d20;
 }
 
 .contact-section .section-header p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--black);
 }
 
 .contact-main {
@@ -834,7 +835,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.82);
+  color: #1a5d2d;
 }
 
 .form-group input,
@@ -903,7 +904,7 @@ a:hover {
 }
 
 .contact-info-title {
-  color: var(--white);
+  color: #0d3d20;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.02em;
