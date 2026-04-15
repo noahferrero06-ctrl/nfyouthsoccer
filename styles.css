@@ -1019,23 +1019,7 @@ a:hover {
 /* ==================== */
 /* Responsive Design */
 /* ==================== */
-@media (max-width: 768px) {
-  .players-experiences-layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "title"
-      "talk"
-      "training-1"
-      "training-2"
-      "luca"
-      "placeholder";
-    margin-top: 0;
-  }
 
-  .players-experiences-title {
-    position: static;
-    top: auto;
-  }
 
   .players-video-luca {
     margin-top: 0;
@@ -1272,14 +1256,16 @@ a:hover {
     "jacob-talk training-1"
     "luca-talk training-2"
     ". luca-training";
-  gap: 1.2rem;
+  column-gap: 2rem;
+  row-gap: 1.2rem;
   align-items: start;
 }
 
 .players-experiences-title {
   grid-area: title;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  align-self: end;
 }
 
 .players-experiences-title h2 {
@@ -1321,14 +1307,10 @@ a:hover {
   background: #000;
 }
 
-.jacob-talk .players-video-element {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
+.jacob-talk .players-video-element,
 .luca-talk .players-video-element {
   aspect-ratio: 16 / 9;
-  object-fit: contain;
+  object-fit: cover;
   background: #000;
 }
 
@@ -1357,9 +1339,3 @@ a:hover {
   }
 }
 
-/* tighten right column spacing */
-.jacob-training-1,
-.jacob-training-2,
-.luca-training {
-  margin-top: -6px;
-}
