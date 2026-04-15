@@ -1272,7 +1272,7 @@ a:hover {
     "jacob-talk training-1"
     "luca-talk training-2"
     ". luca-training";
-  gap: 2rem;
+  gap: 1.2rem;
   align-items: start;
 }
 
@@ -1321,11 +1321,15 @@ a:hover {
   background: #000;
 }
 
-/* Make the two talking videos the same size */
-.jacob-talk .players-video-element,
-.luca-talk .players-video-element {
+.jacob-talk .players-video-element {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.luca-talk .players-video-element {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
 }
 
 /* Make the right-column training videos consistent */
@@ -1351,4 +1355,11 @@ a:hover {
   .players-experiences-title {
     margin-bottom: 1rem;
   }
+}
+
+/* tighten right column spacing */
+.jacob-training-1,
+.jacob-training-2,
+.luca-training {
+  margin-top: -6px;
 }
