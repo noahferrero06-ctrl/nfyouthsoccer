@@ -1262,38 +1262,51 @@ a:hover {
     font-size: 1.4rem;
   }
 }
-/* ===== FIX PLAYERS EXPERIENCES LAYOUT ===== */
+/* ===== PLAYERS EXPERIENCES FINAL FIX ===== */
 
 .players-experiences-layout {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
+  grid-template-columns: 1.45fr 1fr;
+  grid-template-areas:
+    "title title"
+    "jacob-talk training-1"
+    "luca-talk training-2"
+    ". luca-training";
   gap: 2rem;
   align-items: start;
 }
 
 .players-experiences-title {
-  grid-column: 1 / -1;
+  grid-area: title;
   text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.players-experiences-title h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
 }
 
 .jacob-talk {
-  grid-column: 1;
-  grid-row: 2;
+  grid-area: jacob-talk;
 }
 
 .luca-talk {
-  grid-column: 1;
-  grid-row: 3;
+  grid-area: luca-talk;
 }
 
 .jacob-training-1 {
-  grid-column: 2;
-  grid-row: 2;
+  grid-area: training-1;
 }
 
 .jacob-training-2 {
-  grid-column: 2;
-  grid-row: 3;
+  grid-area: training-2;
+}
+
+.luca-training {
+  grid-area: luca-training;
 }
 
 .players-video {
@@ -1304,19 +1317,38 @@ a:hover {
   width: 100%;
   display: block;
   border-radius: 20px;
+  overflow: hidden;
+  background: #000;
 }
 
-/* MOBILE FIX */
+/* Make the two talking videos the same size */
+.jacob-talk .players-video-element,
+.luca-talk .players-video-element {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Make the right-column training videos consistent */
+.jacob-training-1 .players-video-element,
+.jacob-training-2 .players-video-element,
+.luca-training .players-video-element {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .players-experiences-layout {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "jacob-talk"
+      "jacob-training-1"
+      "jacob-training-2"
+      "luca-talk"
+      "luca-training";
   }
 
-  .jacob-talk,
-  .luca-talk,
-  .jacob-training-1,
-  .jacob-training-2 {
-    grid-column: 1;
-    grid-row: auto;
+  .players-experiences-title {
+    margin-bottom: 1rem;
   }
 }
