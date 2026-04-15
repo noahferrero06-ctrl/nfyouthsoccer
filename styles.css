@@ -1262,3 +1262,61 @@ a:hover {
     font-size: 1.4rem;
   }
 }
+/* ===== FIX PLAYERS EXPERIENCES LAYOUT ===== */
+
+.players-experiences-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.players-experiences-title {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.jacob-talk {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.luca-talk {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.jacob-training-1 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.jacob-training-2 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.players-video {
+  width: 100%;
+}
+
+.players-video-element {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .players-experiences-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .jacob-talk,
+  .luca-talk,
+  .jacob-training-1,
+  .jacob-training-2 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
