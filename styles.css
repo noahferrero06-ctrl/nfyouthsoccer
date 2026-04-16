@@ -7,7 +7,7 @@
       "jacob-talk luca-talk"
       "training-1 training-2"
       "luca-training .";
-    row-gap: 1.2rem;
+    row-gap: 0.2rem;
     column-gap: 1rem;
   }
   .players-video {
