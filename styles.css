@@ -1,3 +1,41 @@
+@media (max-width: 768px) {
+  .players-experiences-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "jacob-talk luca-talk"
+      "training-1 training-2"
+      "luca-training .";
+    row-gap: 1.2rem;
+    column-gap: 1rem;
+  }
+  .players-video {
+    width: 100%;
+    min-width: 0;
+  }
+  .players-experiences-title {
+    grid-area: title;
+    margin-bottom: 0.5rem;
+  }
+  .jacob-talk { grid-area: jacob-talk; }
+  .luca-talk { grid-area: luca-talk; }
+  .jacob-training-1 { grid-area: training-1; }
+  .jacob-training-2 { grid-area: training-2; }
+  .luca-training { grid-area: luca-training; }
+}
+@media (max-width: 500px) {
+  .players-experiences-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "jacob-talk"
+      "luca-talk"
+      "training-1"
+      "training-2"
+      "luca-training";
+  }
+}
 /* ==================== */
 /* Color Variables */
 /* ==================== */
