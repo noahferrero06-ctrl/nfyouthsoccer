@@ -1307,10 +1307,15 @@ a:hover {
   background: #000;
 }
 
-.jacob-talk .players-video-element,
-.luca-talk .players-video-element {
+.jacob-talk .players-video-element {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  background: #000;
+}
+
+.luca-talk .players-video-element {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   background: #000;
 }
 
