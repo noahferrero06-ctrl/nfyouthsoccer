@@ -1,41 +1,4 @@
-@media (max-width: 768px) {
-  .players-experiences-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "title title"
-      "jacob-talk luca-talk"
-      "training-1 training-2"
-      "luca-training .";
-    row-gap: 0.2rem;
-    column-gap: 1rem;
-  }
-  .players-video {
-    width: 100%;
-    min-width: 0;
-  }
-  .players-experiences-title {
-    grid-area: title;
-    margin-bottom: 0.5rem;
-  }
-  .jacob-talk { grid-area: jacob-talk; }
-  .luca-talk { grid-area: luca-talk; }
-  .jacob-training-1 { grid-area: training-1; }
-  .jacob-training-2 { grid-area: training-2; }
-  .luca-training { grid-area: luca-training; }
-}
-@media (max-width: 500px) {
-  .players-experiences-layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "title"
-      "jacob-talk"
-      "luca-talk"
-      "training-1"
-      "training-2"
-      "luca-training";
-  }
-}
+
 /* ==================== */
 /* Color Variables */
 /* ==================== */
@@ -1388,6 +1351,7 @@ a:hover {
 }
 @media (max-width: 768px) {
   .players-experiences-layout {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
       "title"
@@ -1396,10 +1360,43 @@ a:hover {
       "jacob-training-2"
       "luca-talk"
       "luca-training";
+    row-gap: 1rem;
+    column-gap: 0;
   }
 
   .players-experiences-title {
-    margin-bottom: 1rem;
+    grid-area: title;
+    margin-bottom: 0.5rem;
+  }
+
+  .jacob-talk       { grid-area: jacob-talk; }
+  .luca-talk        { grid-area: luca-talk; }
+  .jacob-training-1 { grid-area: jacob-training-1; height: auto; max-width: 100%; }
+  .jacob-training-2 { grid-area: jacob-training-2; height: auto; max-width: 100%; }
+  .luca-training    { grid-area: luca-training;    height: auto; max-width: 100%; }
+
+  .players-video {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .players-video-element {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    max-height: none;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .jacob-training-1 .players-video-element,
+  .jacob-training-2 .players-video-element,
+  .luca-training .players-video-element {
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
   }
 }
 
