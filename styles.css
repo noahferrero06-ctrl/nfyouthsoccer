@@ -1295,14 +1295,14 @@ a:hover {
 }
 
 .jacob-talk .players-video-element,
-.luca-talk .players-video-element,
-.jacob-training-1 .players-video-element,
-.luca-training .players-video-element {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  background: #000;
+  .luca-talk .players-video-element,
+  .jacob-training-1 .players-video-element,
+  .luca-training .players-video-element {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
 }
 
 .jacob-talk,
