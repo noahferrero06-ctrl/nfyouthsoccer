@@ -1242,13 +1242,13 @@ a:hover {
 
 .players-experiences-layout {
   display: grid;
-  grid-template-columns: 1.45fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "title title"
     "jacob-talk jacob-training-1"
     "luca-talk luca-training";
   column-gap: 2rem;
-  row-gap: 0.2rem;
+  row-gap: 2rem;
   align-items: start;
 }
 
@@ -1280,8 +1280,6 @@ a:hover {
 
 .luca-training {
   grid-area: luca-training;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
 .players-video {
@@ -1297,48 +1295,28 @@ a:hover {
 }
 
 .jacob-talk .players-video-element,
-.luca-talk .players-video-element {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: #000;
-}
-
-/* Make the right-column training videos consistent */
-.jacob-training-1 .players-video-element,
-
+.luca-talk .players-video-element,
 .jacob-training-1 .players-video-element,
 .luca-training .players-video-element {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  min-width: 0;
-  min-height: 0;
-  max-width: 480px;
-  max-height: 270px;
-  margin: 0 auto;
+  background: #000;
 }
 
+.jacob-talk,
+.luca-talk,
 .jacob-training-1,
 .luca-training {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
   width: 100%;
-  max-width: 480px;
-  height: 270px;
-  min-width: 0;
-  min-height: 0;
-  margin: 0 auto;
-}
-.luca-training {
+  aspect-ratio: 16 / 9;
   display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
-  height: 100%;
-  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 20px;
 }
 @media (max-width: 768px) {
   .players-experiences-layout {
