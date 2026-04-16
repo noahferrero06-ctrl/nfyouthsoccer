@@ -770,13 +770,13 @@ a:hover {
 
 .players-video-training-1 {
   grid-area: training-1;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1.2rem;
   transform: none;
 }
 
 .players-video-training-2 {
   grid-area: training-2;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1.2rem;
   transform: none;
 }
 
