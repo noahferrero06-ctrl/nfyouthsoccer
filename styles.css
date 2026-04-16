@@ -1352,10 +1352,20 @@ a:hover {
 .luca-training .players-video-element {
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin: 0 !important;
-  padding: 0 !important;
+  height: 100%;
+  min-height: 0;
+  max-height: 340px;
 }
 
+.jacob-training-2,
+.luca-training {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  height: 100%;
+  min-height: 0;
+}
 @media (max-width: 768px) {
   .players-experiences-layout {
     grid-template-columns: 1fr;
