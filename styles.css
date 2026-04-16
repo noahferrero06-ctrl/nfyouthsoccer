@@ -1,3 +1,11 @@
+@media (max-width: 768px) {
+  .about-section .section-header {
+    margin-bottom: 1.5rem;
+  }
+  .about-section .section-label {
+    margin-bottom: 0.5rem;
+  }
+}
 
 /* ==================== */
 /* Color Variables */
