@@ -1245,9 +1245,8 @@ a:hover {
   grid-template-columns: 1.45fr 1fr;
   grid-template-areas:
     "title title"
-    "jacob-talk training-1"
-    "luca-talk training-2"
-    ". luca-training";
+    "jacob-talk jacob-training-1"
+    "luca-talk luca-training";
   column-gap: 2rem;
   row-gap: 0.2rem;
   align-items: start;
@@ -1276,13 +1275,8 @@ a:hover {
 }
 
 .jacob-training-1 {
-  grid-area: training-1;
+  grid-area: jacob-training-1;
 }
-
-.jacob-training-2 {
-  grid-area: training-2;
-}
-
 
 .luca-training {
   grid-area: luca-training;
@@ -1313,7 +1307,6 @@ a:hover {
 .jacob-training-1 .players-video-element,
 
 .jacob-training-1 .players-video-element,
-.jacob-training-2 .players-video-element,
 .luca-training .players-video-element {
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -1327,7 +1320,6 @@ a:hover {
 }
 
 .jacob-training-1,
-.jacob-training-2,
 .luca-training {
   display: flex;
   flex-direction: column;
@@ -1340,7 +1332,6 @@ a:hover {
   min-height: 0;
   margin: 0 auto;
 }
-.jacob-training-2,
 .luca-training {
   display: flex;
   flex-direction: column;
@@ -1357,7 +1348,6 @@ a:hover {
       "title"
       "jacob-talk"
       "jacob-training-1"
-      "jacob-training-2"
       "luca-talk"
       "luca-training";
     row-gap: 1rem;
@@ -1372,7 +1362,6 @@ a:hover {
   .jacob-talk       { grid-area: jacob-talk; }
   .luca-talk        { grid-area: luca-talk; }
   .jacob-training-1 { grid-area: jacob-training-1; height: auto; max-width: 100%; }
-  .jacob-training-2 { grid-area: jacob-training-2; height: auto; max-width: 100%; }
   .luca-training    { grid-area: luca-training;    height: auto; max-width: 100%; }
 
   .players-video {
@@ -1392,7 +1381,6 @@ a:hover {
   }
 
   .jacob-training-1 .players-video-element,
-  .jacob-training-2 .players-video-element,
   .luca-training .players-video-element {
     max-width: 100%;
     max-height: none;
