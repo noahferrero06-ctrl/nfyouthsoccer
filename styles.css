@@ -759,9 +759,11 @@ a:hover {
   transform: none;
 }
 
+
 .players-video-training-2 {
   grid-area: training-2;
-  margin-bottom: 0.2rem;
+  margin: 0 !important;
+  padding: 0 !important;
   transform: none;
 }
 
@@ -1317,8 +1319,11 @@ a:hover {
   grid-area: training-2;
 }
 
+
 .luca-training {
   grid-area: luca-training;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .players-video {
@@ -1342,10 +1347,13 @@ a:hover {
 
 /* Make the right-column training videos consistent */
 .jacob-training-1 .players-video-element,
+
 .jacob-training-2 .players-video-element,
 .luca-training .players-video-element {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 @media (max-width: 768px) {
