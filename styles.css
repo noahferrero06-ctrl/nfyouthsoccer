@@ -770,13 +770,13 @@ a:hover {
 
 .players-video-training-1 {
   grid-area: training-1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   transform: none;
 }
 
 .players-video-training-2 {
   grid-area: training-2;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   transform: none;
 }
 
@@ -1298,7 +1298,7 @@ a:hover {
     "luca-talk training-2"
     ". luca-training";
   column-gap: 2rem;
-  row-gap: 0.5rem;
+  row-gap: 0.2rem;
   align-items: start;
 }
 
