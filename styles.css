@@ -226,6 +226,22 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  background: var(--dark-green);
+  border-radius: 8px;
+  padding: 4px 8px 4px 4px;
+  height: 40px;
+ }
+
+.logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid var(--dark-green);
+  background: var(--dark-green);
+  margin-right: 0.5rem;
   flex-wrap: nowrap;
   text-decoration: none;
 }
