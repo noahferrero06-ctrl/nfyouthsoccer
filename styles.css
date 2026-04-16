@@ -1348,15 +1348,34 @@ a:hover {
 /* Make the right-column training videos consistent */
 .jacob-training-1 .players-video-element,
 
+.jacob-training-1 .players-video-element,
 .jacob-training-2 .players-video-element,
 .luca-training .players-video-element {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  width: 100%;
   height: 100%;
+  min-width: 0;
   min-height: 0;
-  max-height: 340px;
+  max-width: 480px;
+  max-height: 270px;
+  margin: 0 auto;
 }
 
+.jacob-training-1,
+.jacob-training-2,
+.luca-training {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+  max-width: 480px;
+  height: 270px;
+  min-width: 0;
+  min-height: 0;
+  margin: 0 auto;
+}
 .jacob-training-2,
 .luca-training {
   display: flex;
