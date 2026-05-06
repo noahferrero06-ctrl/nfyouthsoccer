@@ -893,6 +893,8 @@ a:hover {
   font-weight: 600;
   color: var(--yellow);
   display: none;
+  text-align: center;
+  width: 100%;
 }
 
 .form-success.is-visible {
